@@ -8,7 +8,7 @@ const APP_ROUTES: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'challenge',
+    path: 'challenge/:id',
     loadChildren: './../app/challenge/challenge.module#ChallengeModule',
   },
 ];

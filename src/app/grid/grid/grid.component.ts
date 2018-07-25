@@ -1,15 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PeriodicElement, list } from 'language/list';
 
-export interface PeriodicElement {
-  challengeName: string;
-  link: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  { challengeName: 'Find The Leader', link: 'xyz' },
-  { challengeName: 'no 2', link: '2' },
-];
+const ELEMENT_DATA: PeriodicElement[] = list;
 
 @Component({
   selector: 'app-grid',
@@ -25,7 +18,7 @@ export class GridComponent implements OnInit {
   ngOnInit() {
   }
 
-  onChallengeOpen() {
-    this.router.navigate(['/challenge']);
+  onChallengeOpen(id: number) {
+    this.router.navigate(['/challenge', id]);
   }
 }

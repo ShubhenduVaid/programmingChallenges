@@ -13,7 +13,7 @@ import { MaterialModule } from '../material/material.module';
   ],
   exports: [
     CommonModule,
-    MaterialModule, 
+    MaterialModule,
     FormsModule
   ],
   declarations: []

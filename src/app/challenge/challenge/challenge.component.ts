@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CodemirrorService } from '@nomadreservations/ngx-codemirror';
+import { ActivatedRoute } from '@angular/router';
+
+import { list as recordList, PeriodicElement } from 'language/list';
+import { * } from 'language';
 @Component({
   selector: 'app-challenge',
   templateUrl: './challenge.component.html',
@@ -14,39 +18,31 @@ export class ChallengeComponent implements OnInit {
     styleActiveLine: true,
     matchBrackets: true
   };
-  public value: any = `
-  let arr = [1, 1, 1, 1, 1, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5];
-  function solution(arr) {
-      let length = arr.length;
-      let currentValue = arr[0];
-      let counter = 0;
-      let maxCounter = 0;
-      let maxCounterValue = 0;
-      arr.forEach(element => {
-          if (currentValue !== element) {
-              if (counter > maxCounter) {
-                  maxCounter = counter;
-                  maxCounterValue = currentValue;
-              }
-              counter = 0;
-              currentValue = element;
-          }
-          counter++;
-      });
-      let obj = {};
-      obj[maxCounterValue] = maxCounter
-      return obj;
-  }
-  console.log(solution(arr));
-  `;
+  public value: any;
   public language = 'gfm';
   public codemirror;
-  constructor(private _codeMirror: CodemirrorService) { }
+  private _id: string;
+  public record: PeriodicElement;
+  constructor(
+    private route: ActivatedRoute,
+    private _codeMirror: CodemirrorService
+  ) { }
 
   ngOnInit() {
+    this._id = this.route.snapshot.params.id;
+    this.setEditorValue();
     this._codeMirror.instance$.subscribe((editor) => {
-      console.log(editor.state);
+      // console.log(editor.state);
     });
   }
 
+  setEditorValue() {
+    for (let index = 0; index < recordList.length; index++) {
+      if (recordList[index].id === this._id) {
+        this.record = recordList[index];
+        break;
+      }
+    }
+    this.value = findTheLeader;// this.record.link;
+  }
 }
