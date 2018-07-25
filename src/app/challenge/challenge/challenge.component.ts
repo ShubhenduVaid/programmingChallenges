@@ -3,7 +3,7 @@ import { CodemirrorService } from '@nomadreservations/ngx-codemirror';
 import { ActivatedRoute } from '@angular/router';
 
 import { list as recordList, PeriodicElement } from 'language/list';
-import { * } from 'language';
+import * as data from 'language';
 @Component({
   selector: 'app-challenge',
   templateUrl: './challenge.component.html',
@@ -43,6 +43,6 @@ export class ChallengeComponent implements OnInit {
         break;
       }
     }
-    this.value = findTheLeader;// this.record.link;
+    this.value = data[this.record.link];
   }
 }

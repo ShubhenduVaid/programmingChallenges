@@ -7,8 +7,8 @@ export const list: PeriodicElement[] = [
   },
   {
     id: '2',
-    challengeName: 'no 2',
-    link: '2',
+    challengeName: 'Find the Queen',
+    link: 'findTheQueen',
     difficulty: 'EASY'
   },
 ];

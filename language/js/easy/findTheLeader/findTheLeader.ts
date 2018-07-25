@@ -1,4 +1,7 @@
 export const findTheLeader = `
+
+Find the no in a ascending sorted array with max count. Function should return count and no. 
+
 let arr = [1, 1, 1, 1, 1, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5];
 function solution(arr) {
     let length = arr.length;
