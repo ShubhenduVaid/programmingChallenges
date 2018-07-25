@@ -3,13 +3,15 @@ export const list: PeriodicElement[] = [
     id: '1',
     challengeName: 'Find The Leader',
     link: 'findTheLeader',
-    difficulty: 'EASY'
+    difficulty: 'EASY',
+    language: 'JavaScript'
   },
   {
     id: '2',
-    challengeName: 'Find the Queen',
-    link: 'findTheQueen',
-    difficulty: 'EASY'
+    challengeName: 'Find Binary Gap',
+    link: 'findBinaryGap',
+    difficulty: 'EASY',
+    language: 'JavaScript'
   },
 ];
 
@@ -18,4 +20,5 @@ export interface PeriodicElement {
   challengeName: string;
   link: string;
   difficulty: string;
+  language: string;
 }

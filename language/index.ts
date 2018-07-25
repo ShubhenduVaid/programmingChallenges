@@ -1,2 +1,2 @@
 export * from "./js/easy/findTheLeader/findTheLeader";
-export * from "./js/easy/findTheQueen/findTheQueen";
+export * from "./js/easy/findBinaryGap/findBinaryGap";

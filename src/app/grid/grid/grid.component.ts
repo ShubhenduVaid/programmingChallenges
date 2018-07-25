@@ -11,7 +11,7 @@ const ELEMENT_DATA: PeriodicElement[] = list;
 })
 
 export class GridComponent implements OnInit {
-  displayedColumns: string[] = ['challengeName', 'link'];
+  displayedColumns: string[] = ['challengeName', 'difficulty', 'language', 'link'];
   dataSource = ELEMENT_DATA;
   constructor(private router: Router) { }
 

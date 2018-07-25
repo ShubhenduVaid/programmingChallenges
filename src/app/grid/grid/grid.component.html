@@ -7,13 +7,26 @@
     <td mat-cell *matCellDef="let element"> {{element.challengeName}} </td>
   </ng-container>
 
-  <!-- Name Column -->
+  <ng-container matColumnDef="language">
+    <th mat-header-cell *matHeaderCellDef>
+      <h1>Language</h1>
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.language}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="difficulty">
+    <th mat-header-cell *matHeaderCellDef>
+      <h1>Difficulty</h1>
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.difficulty}} </td>
+  </ng-container>
+
   <ng-container matColumnDef="link">
     <th mat-header-cell *matHeaderCellDef>
       <h1>Link</h1>
     </th>
     <td mat-cell *matCellDef="let element">
-      <button mat-raised-button color="primary" (click)="onChallengeOpen(element.id)">Open</button>
+      <button mat-raised-button color="primary" (click)="onChallengeOpen(element.id)">Solution</button>
     </td>
   </ng-container>
 
