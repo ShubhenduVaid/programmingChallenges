@@ -13,6 +13,13 @@ export const list: PeriodicElement[] = [
     difficulty: 'EASY',
     language: 'JavaScript'
   },
+  {
+    id: '3',
+    challengeName: 'Find Top Brands',
+    link: 'findTopBrands',
+    difficulty: 'MEDIUM',
+    language: 'JavaScript'
+  },
 ];
 
 export interface PeriodicElement {
