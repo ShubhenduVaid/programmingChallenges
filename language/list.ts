@@ -20,6 +20,13 @@ export const list: PeriodicElement[] = [
     difficulty: 'MEDIUM',
     language: 'JavaScript'
   },
+  {
+    id: '4',
+    challengeName: 'Array Rotation',
+    link: 'arrayRotation',
+    difficulty: 'EASY',
+    language: 'JavaScript'
+  },
 ];
 
 export interface PeriodicElement {
