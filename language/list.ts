@@ -27,6 +27,13 @@ export const list: PeriodicElement[] = [
     difficulty: 'EASY',
     language: 'JavaScript'
   },
+  {
+    id: '5',
+    challengeName: 'Array Odd Occurances',
+    link: 'oddOccurances',
+    difficulty: 'EASY',
+    language: 'JavaScript'
+  },
 ];
 
 export interface PeriodicElement {
