@@ -34,6 +34,13 @@ export const list: PeriodicElement[] = [
     difficulty: 'EASY',
     language: 'JavaScript'
   },
+  {
+    id: '6',
+    challengeName: 'Frog Jump',
+    link: 'frogJump',
+    difficulty: 'EASY',
+    language: 'JavaScript'
+  },
 ];
 
 export interface PeriodicElement {
