@@ -14,8 +14,8 @@ language/index.ts and language/list.ts needs to be updated for new addition.
 Searching is based on any value in the list.ts.
 
 ## Challege
-Solution File
+Solution File :: 
 language/{language}/{difficulty}/{challengeName}/index
 
-View File
+View File :: 
 language/{language}/{difficulty}/{challengeName}/{filename}
