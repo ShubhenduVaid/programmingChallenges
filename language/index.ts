@@ -4,3 +4,6 @@ export * from './js/medium/findTopBrands/findTopBrands';
 export * from './js/easy/arrayRotation/arrayRotation';
 export * from './js/easy/oddOccurances/oddOccurances';
 export * from './js/easy/frogJump/frogJump';
+export * from './js/easy/findMissingElement/findMissingElement';
+export * from './js/medium/findTapeEquilibrium/findTapeEquilibrium';
+export * from './js/easy/findFrequentWord/findFrequentWord';

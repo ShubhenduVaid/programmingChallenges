@@ -41,6 +41,27 @@ export const list: PeriodicElement[] = [
     difficulty: 'EASY',
     language: 'JavaScript'
   },
+  {
+    id: '7',
+    challengeName: 'Find Missing Element',
+    link: 'findMissingElement',
+    difficulty: 'EASY',
+    language: 'JavaScript'
+  },
+  {
+    id: '8',
+    challengeName: 'Find Tape Equilibrium',
+    link: 'findTapeEquilibrium',
+    difficulty: 'Medium',
+    language: 'JavaScript'
+  },
+  {
+    id: '9',
+    challengeName: 'Find the most frequent word in array (Amazon Gurgoan)',
+    link: 'findFrequentWord',
+    difficulty: 'Easy',
+    language: 'JavaScript'
+  },
 ];
 
 export interface PeriodicElement {
