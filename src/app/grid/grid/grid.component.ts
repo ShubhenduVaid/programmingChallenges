@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import {MatTableDataSource} from '@angular/material';
+import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 
 import { PeriodicElement, list } from 'language/list';
 
@@ -15,9 +15,16 @@ const ELEMENT_DATA: PeriodicElement[] = list;
 export class GridComponent implements OnInit {
   displayedColumns: string[] = ['challengeName', 'difficulty', 'language', 'link'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
-  constructor(private router: Router) { }
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
   onChallengeOpen(id: number) {
@@ -26,5 +33,8 @@ export class GridComponent implements OnInit {
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 }
