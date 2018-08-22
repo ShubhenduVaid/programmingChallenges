@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CodemirrorService } from '@nomadreservations/ngx-codemirror';
 import { ActivatedRoute } from '@angular/router';
 
 import { list as recordList, PeriodicElement } from 'language/list';
@@ -10,30 +9,17 @@ import * as data from 'language';
   styleUrls: ['./challenge.component.css']
 })
 export class ChallengeComponent implements OnInit {
-  public config = {
-    lineNumbers: true,
-    lineWrapping: true,
-    tabSize: 2,
-    theme: 'monokai',
-    styleActiveLine: true,
-    matchBrackets: true
-  };
-  public value: any;
-  public language = 'gfm';
-  public codemirror;
-  private _id: string;
+  public editorOptions = {};
+  public code: string = '';
   public record: PeriodicElement;
+  private _id: string;
   constructor(
     private route: ActivatedRoute,
-    private _codeMirror: CodemirrorService
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this._id = this.route.snapshot.params.id;
     this.setEditorValue();
-    this._codeMirror.instance$.subscribe((editor) => {
-      // console.log(editor.state);
-    });
   }
 
   setEditorValue() {
@@ -43,6 +29,7 @@ export class ChallengeComponent implements OnInit {
         break;
       }
     }
-    this.value = data[this.record.link];
+    this.code = data[this.record.link];
+    this.editorOptions = { theme: 'vs-dark', language: (this.record.language).toLowerCase() };
   }
 }

@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CodemirrorModule } from '../../../node_modules/@nomadreservations/ngx-codemirror';
+import { MonacoEditorModule } from 'ngx-monaco-editor';
 
 import { ChallengeComponent } from './challenge/challenge.component';
 import { SharedModule } from '../shared/shared.module';
 import { ChallengeRouter } from './challenge.router';
 
-
 @NgModule({
   imports: [
     ChallengeRouter,
     SharedModule,
-    CodemirrorModule
+    MonacoEditorModule.forRoot() // use forRoot() in main app module only.
   ],
   exports: [
     SharedModule
