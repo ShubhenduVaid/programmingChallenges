@@ -18,10 +18,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Folder named language contains challenge files.
 language/index.ts and language/list.ts needs to be updated for new addition.
 
-## Searching
-
-Searching is based on any value in the list.ts.
-
 ## Challege
 
 Solution File :: 
@@ -30,3 +26,6 @@ language/{language}/{difficulty}/{challengeName}/index
 View File :: 
 language/{language}/{difficulty}/{challengeName}/{filename}
 
+## Searching
+
+Searching is based on any value in the list.ts.
