@@ -62,6 +62,13 @@ export const list: PeriodicElement[] = [
     difficulty: 'EASY',
     language: 'JavaScript'
   },
+  {
+    id: '10',
+    challengeName: 'Check for valid braces in an expression (Geeks for geeks)',
+    link: 'bracesCheck',
+    difficulty: 'EASY',
+    language: 'JavaScript'
+  },
 ];
 
 export interface PeriodicElement {

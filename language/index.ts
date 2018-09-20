@@ -7,3 +7,4 @@ export * from './js/easy/frogJump/frogJump';
 export * from './js/easy/findMissingElement/findMissingElement';
 export * from './js/medium/findTapeEquilibrium/findTapeEquilibrium';
 export * from './js/easy/findFrequentWord/findFrequentWord';
+export * from './js/easy/bracesCheck/bracesCheck';
