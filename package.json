@@ -8,7 +8,9 @@
     "test": "ng test",
     "test-headless": "ng test --browsers=ChromeHeadless --watch=false",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "buildgh": "ng build --prod",
+    "deploygh": "ngh"
   },
   "private": true,
   "dependencies": {

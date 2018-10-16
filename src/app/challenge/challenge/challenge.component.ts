@@ -30,6 +30,6 @@ export class ChallengeComponent implements OnInit {
       }
     }
     this.code = data[this.record.link];
-    this.editorOptions = { theme: 'vs-dark', language: (this.record.language).toLowerCase() };
+    this.editorOptions = { theme: 'vs-dark', automaticLayout: true, language: (this.record.language).toLowerCase() };
   }
 }
