@@ -1,0 +1,4 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.findTheLeader = "\n\nFind the no in a ascending sorted array with max count. Function should return count and no. \n\nlet arr = [1, 1, 1, 1, 1, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5];\nfunction solution(arr) {\n    let length = arr.length;\n    let currentValue = arr[0];\n    let counter = 0;\n    let maxCounter = 0;\n    let maxCounterValue = 0;\n    arr.forEach(element => {\n        if (currentValue !== element) {\n            if (counter > maxCounter) {\n                maxCounter = counter;\n                maxCounterValue = currentValue;\n            }\n            counter = 0;\n            currentValue = element;\n        }\n        counter++;\n    });\n    let obj = {};\n    obj[maxCounterValue] = maxCounter\n    return obj;\n}\nconsole.log(solution(arr));\n";
+//# sourceMappingURL=findTheLeader.js.map
