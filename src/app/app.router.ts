@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { CustomPreloadingStrategy } from './app.preloadStrategy';
+
 const APP_ROUTES: Routes = [
   {
     path: '',
@@ -10,6 +12,7 @@ const APP_ROUTES: Routes = [
   {
     path: 'challenge/:id',
     loadChildren: './../app/challenge/challenge.module#ChallengeModule',
+    data: { preload: true }
   },
 ];
 
@@ -18,14 +21,16 @@ const APP_ROUTES: Routes = [
     RouterModule.forRoot(
       APP_ROUTES,
       {
-        enableTracing: false
+        enableTracing: false,
+        useHash: true,
+        preloadingStrategy: CustomPreloadingStrategy,
       }
     )
   ],
   exports: [
     RouterModule
   ],
-  providers: []
+  providers: [CustomPreloadingStrategy]
 })
 
 export class AppRoutingModule { }
