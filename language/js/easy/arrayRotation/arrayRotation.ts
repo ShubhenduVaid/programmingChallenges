@@ -52,10 +52,10 @@ function solution(A, K) {
     }
     return rotatedList;
   };
-  
+
   let A = [1,2,3,4];
-  
+
   let K = 5;
-  
+
   console.log(solution(A, K));
 `;

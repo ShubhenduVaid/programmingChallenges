@@ -13,7 +13,7 @@ describe('GridComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [GridComponent],
-      imports: [MaterialModule, RouterModule.forRoot([]),BrowserAnimationsModule],
+      imports: [MaterialModule, RouterModule.forRoot([]), BrowserAnimationsModule],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
     })
       .compileComponents();
