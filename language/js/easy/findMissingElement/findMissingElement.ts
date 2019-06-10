@@ -34,7 +34,7 @@ function solution(A) {
     let currentElement = sortedList[0];
     for(let i = 1; i < sortedList.length; i++){
         if(sortedList[i] - currentElement > 1){
-            return (currentElement + 1); 
+            return (currentElement + 1);
         }
         currentElement = sortedList[i];
     }
@@ -45,14 +45,14 @@ function solution(A) {
     A.sort(function(a, b) {
         return a - b;
     });
-    
+
     var next = 1;
     var i=0;
     while(next === A[i]) {
         next++;
         i++;
     }
-    
+
     return next;
 }
 

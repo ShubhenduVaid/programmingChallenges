@@ -38,7 +38,7 @@ function solution(A) {
     let outputMap = {};
     A.forEach((element) => {
        if(outputMap[element] === undefined){
-            outputMap[element] = 1;    
+            outputMap[element] = 1;
        }
        else{
            if(outputMap[element] === 1){

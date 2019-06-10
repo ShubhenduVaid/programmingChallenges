@@ -10,7 +10,7 @@ import * as data from 'language';
 })
 export class ChallengeComponent implements OnInit {
   public editorOptions = {};
-  public code: string = '';
+  public code = '';
   public record: PeriodicElement;
   private _id: string;
   constructor(
