@@ -6,3 +6,13 @@ table {
   font-size: 14px;
   width: 100%;
 }
+
+.gridContainer {
+  width: auto;
+}
+
+@media screen and (max-width: 768px){
+  .gridContainer {
+    width: fit-content;
+  }
+}
