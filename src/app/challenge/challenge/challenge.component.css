@@ -1,3 +1,10 @@
 .my-code-editor {
-    height: 700px;
+  height: 550px;
+  width: 60%;
+  float: right;
+}
+
+.description {
+  float: left;
+  width: 38%;
 }
