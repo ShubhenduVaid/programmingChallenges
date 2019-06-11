@@ -1,62 +1,62 @@
-export const oddOccurances =
-`
-A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.
+export const oddOccurances = {
+  name: `Odd Occurances`,
+  description: `A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.
 
-For example, in array A such that:
+  For example, in array A such that:
 
-  A[0] = 9  A[1] = 3  A[2] = 9
-  A[3] = 3  A[4] = 9  A[5] = 7
-  A[6] = 9
-the elements at indexes 0 and 2 have value 9,
-the elements at indexes 1 and 3 have value 3,
-the elements at indexes 4 and 6 have value 9,
-the element at index 5 has value 7 and is unpaired.
-Write a function:
+    A[0] = 9  A[1] = 3  A[2] = 9
+    A[3] = 3  A[4] = 9  A[5] = 7
+    A[6] = 9
+  the elements at indexes 0 and 2 have value 9,
+  the elements at indexes 1 and 3 have value 3,
+  the elements at indexes 4 and 6 have value 9,
+  the element at index 5 has value 7 and is unpaired.
+  Write a function:
 
-int solution(int A[], int N);
+  int solution(int A[], int N);
 
-that, given an array A consisting of N integers fulfilling the above conditions, returns the value of the unpaired element.
+  that, given an array A consisting of N integers fulfilling the above conditions, returns the value of the unpaired element.
 
-For example, given array A such that:
+  For example, given array A such that:
 
-  A[0] = 9  A[1] = 3  A[2] = 9
-  A[3] = 3  A[4] = 9  A[5] = 7
-  A[6] = 9
-the function should return 7, as explained in the example above.
+    A[0] = 9  A[1] = 3  A[2] = 9
+    A[3] = 3  A[4] = 9  A[5] = 7
+    A[6] = 9
+  the function should return 7, as explained in the example above.
 
-Assume that:
+  Assume that:
 
-N is an odd integer within the range [1..1,000,000];
-each element of array A is an integer within the range [1..1,000,000,000];
-all but one of the values in A occur an even number of times.
-Complexity:
+  N is an odd integer within the range [1..1,000,000];
+  each element of array A is an integer within the range [1..1,000,000,000];
+  all but one of the values in A occur an even number of times.
+  Complexity:
 
-expected worst-case time complexity is O(N);
-expected worst-case space complexity is O(1) (not counting the storage required for input arguments).
-
-function solution(A) {
-    let outputMap = {};
-    A.forEach((element) => {
-       if(outputMap[element] === undefined){
-            outputMap[element] = 1;
-       }
-       else{
-           if(outputMap[element] === 1){
-                outputMap[element] = 2;
-           }
-           else if(outputMap[element] === 2){
-                outputMap[element] = 1;
-           }
-       }
-    });
-    let objList = Object.keys(outputMap);
-    let arrLength = objList.length;
-    let lonelyNo = 0;
-    for(let index = 0; index < arrLength ; index++){
-        if(outputMap[objList[index]] === 1){
-            lonelyNo = objList[index];
-        }
+  expected worst-case time complexity is O(N);
+  expected worst-case space complexity is O(1) (not counting the storage required for input arguments).
+  `,
+  solution: `function solution(A) {
+  let outputMap = {};
+  A.forEach((element) => {
+    if (outputMap[element] === undefined) {
+      outputMap[element] = 1;
     }
-    return parseInt(lonelyNo);
-}
-`;
+    else {
+      if (outputMap[element] === 1) {
+        outputMap[element] = 2;
+      }
+      else if (outputMap[element] === 2) {
+        outputMap[element] = 1;
+      }
+    }
+  });
+  let objList = Object.keys(outputMap);
+  let arrLength = objList.length;
+  let lonelyNo = 0;
+  for (let index = 0; index < arrLength; index++) {
+    if (outputMap[objList[index]] === 1) {
+      lonelyNo = objList[index];
+    }
+  }
+  return parseInt(lonelyNo);
+}`
+};

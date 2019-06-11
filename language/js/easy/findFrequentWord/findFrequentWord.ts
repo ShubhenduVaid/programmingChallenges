@@ -1,8 +1,7 @@
-export const findFrequentWord =
-`
-Find the most frequent word in the Array
-
-function solution(A) {
+export const findFrequentWord = {
+    name: `Find Frequent Word`,
+    description: `Find the most frequent word in the Array`,
+    solution: `function solution(A) {
     let obj = {};
     A.forEach(element => {
         if (obj[element] === undefined) {
@@ -25,5 +24,5 @@ function solution(A) {
 };
 // O(n) time and space;
 let list = ["my", "name", "is", "chu", "bansal.", "bansal", "is", "my", "last", "name"];
-console.log(solution(list));
-`;
+console.log(solution(list));`
+};

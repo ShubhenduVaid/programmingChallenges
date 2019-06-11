@@ -1,8 +1,7 @@
-export const findTheLeader =
-`
-Find the no in a ascending sorted array with max count. Function should return count and no.
-
-let arr = [1, 1, 1, 1, 1, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5];
+export const findTheLeader = {
+    name: `Find The Leader`,
+    description: `Find the number in an ascending sorted array with max count. Function should return count and number.`,
+    solution: `let arr = [1, 1, 1, 1, 1, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5];
 function solution(arr) {
     let length = arr.length;
     let currentValue = arr[0];
@@ -25,4 +24,6 @@ function solution(arr) {
     return obj;
 }
 console.log(solution(arr));
-`;
+`
+};
+

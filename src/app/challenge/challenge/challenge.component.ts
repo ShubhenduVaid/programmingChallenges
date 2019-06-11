@@ -12,6 +12,8 @@ export class ChallengeComponent implements OnInit {
   public editorOptions = {};
   public code = '';
   public record: PeriodicElement;
+  public description = '';
+  public name = '';
   private _id: string;
   constructor(
     private route: ActivatedRoute,
@@ -29,7 +31,9 @@ export class ChallengeComponent implements OnInit {
         break;
       }
     }
-    this.code = data[this.record.link];
+    this.code = data[this.record.link].solution;
+    this.description = data[this.record.link].description;
+    this.name = data[this.record.link].name;
     this.editorOptions = { theme: 'vs-dark', automaticLayout: true, language: (this.record.language).toLowerCase() };
   }
 }
