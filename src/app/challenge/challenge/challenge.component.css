@@ -1,10 +1,39 @@
-.my-code-editor {
-  height: 550px;
-  width: 60%;
-  float: right;
+.challengeContainer {
+  display: flex;
 }
 
-.description {
-  float: left;
-  width: 38%;
+@media (orientation: landscape) {
+  .challengeContainer {
+    flex-direction: row;
+  }
+  .my-code-editor {
+    height: 97vh;
+    width: 60%;
+    margin:5px;
+  }
+  .description {
+    width: 38%;
+    min-height: 20vh;
+    max-height: 95vh;
+    overflow-y: auto;
+    margin:5px;
+  }
+}
+
+@media (orientation: portrait) {
+  .challengeContainer {
+    flex-direction: column;
+  }
+  .my-code-editor {
+    height: 48vh;
+    width: 99%;
+    margin:5px;
+  }
+  .description {
+    width: 99%;
+    min-height: 20vh;
+    max-height: 48vh;
+    overflow-y: auto;
+    margin:5px;
+  }
 }
