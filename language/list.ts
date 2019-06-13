@@ -69,6 +69,13 @@ export const list: PeriodicElement[] = [
     difficulty: 'EASY',
     language: 'JavaScript'
   },
+  {
+    id: '11',
+    challengeName: 'Arrange Sentence',
+    link: 'arrangeSentence',
+    difficulty: 'EASY',
+    language: 'JavaScript'
+  },
 ];
 
 export interface PeriodicElement {
