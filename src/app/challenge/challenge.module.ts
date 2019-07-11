@@ -5,6 +5,7 @@ import { ChallengeComponent } from './challenge/challenge.component';
 import { SharedModule } from '../shared/shared.module';
 import { ChallengeRouter } from './challenge.router';
 import { DescriptionComponent } from './challenge/description/description.component';
+import { ExecuterComponent } from './challenge/executer/executer.component';
 
 const monacoConfig: NgxMonacoEditorConfig = {
   baseUrl: 'assets', // configure base path for monaco editor
@@ -18,6 +19,6 @@ const monacoConfig: NgxMonacoEditorConfig = {
   exports: [
     SharedModule
   ],
-  declarations: [ChallengeComponent, DescriptionComponent]
+  declarations: [ChallengeComponent, DescriptionComponent, ExecuterComponent]
 })
 export class ChallengeModule { }

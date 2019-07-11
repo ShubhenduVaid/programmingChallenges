@@ -1,4 +1,7 @@
 <div class="challengeContainer">
   <app-description class="description" [description]="description" [name]="name"></app-description>
-  <ngx-monaco-editor class="my-code-editor" [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+  <div class="codeContainer">
+    <ngx-monaco-editor class="my-code-editor" [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+    <app-executer class="executer" [code]="code"></app-executer>
+  </div>
 </div>

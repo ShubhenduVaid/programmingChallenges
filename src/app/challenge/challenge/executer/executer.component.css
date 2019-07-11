@@ -1,0 +1,22 @@
+.executionContainer {
+  flex-direction: column;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.buttonContainer {
+  flex-direction: row;
+  margin-left: 20px;
+}
+
+.outputContainer {
+  width: 100%;
+  margin-left: 20px;
+}
+
+.output {
+  width: 100%;
+  white-space: pre;
+  vertical-align: middle;
+  word-break: break-word;
+}

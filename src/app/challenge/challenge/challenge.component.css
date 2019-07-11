@@ -6,17 +6,27 @@
   .challengeContainer {
     flex-direction: row;
   }
-  .my-code-editor {
-    height: 97vh;
+  .codeContainer {
+    flex-direction: column;
     width: 60%;
-    margin:5px;
+    background-color: #1e1e1e;
+  }
+  .my-code-editor {
+    height: 75vh;
+    width: 100%;
   }
   .description {
     width: 38%;
     min-height: 20vh;
     max-height: 95vh;
     overflow-y: auto;
-    margin:5px;
+    margin: 5px;
+  }
+  .executer {
+    width: 100%;
+    position: relative;
+    top: -14px;
+    height: 15vh;
   }
 }
 
@@ -24,16 +34,28 @@
   .challengeContainer {
     flex-direction: column;
   }
-  .my-code-editor {
-    height: 48vh;
+  .codeContainer {
+    flex-direction: column;
     width: 99%;
-    margin:5px;
+    background-color: #1e1e1e;
+  }
+  .my-code-editor {
+    height: 33vh;
+    width: 99%;
+    margin: 5px;
   }
   .description {
     width: 99%;
     min-height: 20vh;
-    max-height: 48vh;
+    max-height: 33vh;
     overflow-y: auto;
-    margin:5px;
+    margin: 5px;
+  }
+  .executer {
+    width: 99%;
+    min-height: 20vh;
+    max-height: 33vh;
+    overflow-y: auto;
+    margin: 5px;
   }
 }
