@@ -9,7 +9,7 @@
     "test-headless": "ng test --browsers=ChromeHeadless --watch=false",
     "lint": "ng lint --fix",
     "e2e": "ng e2e",
-    "buildgh": "ng build --prod",
+    "buildgh": "ng build --prod && gzip-all dist/*.*",
     "deploygh": "ngh"
   },
   "private": true,
@@ -27,7 +27,7 @@
     "@angular/router": "^8.0.0",
     "core-js": "^3.1.3",
     "ngx-monaco-editor": "^7.0.0",
-    "npm": "^6.9.0",
+    "npm": "^6.12.0",
     "rxjs": "^6.5.2",
     "zone.js": "^0.9.1"
   },
@@ -40,6 +40,7 @@
     "@types/jasminewd2": "~2.0.6",
     "@types/node": "~12.0.7",
     "codelyzer": "^5.1.0",
+    "gzip-all": "^1.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^4.1.0",
