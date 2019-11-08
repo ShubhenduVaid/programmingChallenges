@@ -11,7 +11,7 @@ const APP_ROUTES: Routes = [
   },
   {
     path: 'challenge/:id',
-    loadChildren: './../app/challenge/challenge.module#ChallengeModule',
+    loadChildren: () => import('./../app/challenge/challenge.module').then(m => m.ChallengeModule),
     data: { preload: true }
   },
 ];
