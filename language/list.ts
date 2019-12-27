@@ -76,6 +76,13 @@ export const list: PeriodicElement[] = [
     difficulty: 'EASY',
     language: 'JavaScript'
   },
+  {
+    id: '12',
+    challengeName: 'Find Top Requests',
+    link: 'findTopRequests',
+    difficulty: 'EASY',
+    language: 'JavaScript'
+  },
 ];
 
 export interface PeriodicElement {
